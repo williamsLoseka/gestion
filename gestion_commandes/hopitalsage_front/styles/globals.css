@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* VARIABLES PERSONNALISÉES */
+@layer base {
+  :root {
+    --primary: 210 100% 56%;
+    --primary-foreground: 0 0% 100%;
+
+    --background: 210 60% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16.3% 46.9%;
+
+    --accent: 42 100% 85%;
+    --accent-foreground: 30 100% 30%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 20% 90%;
+    --input: 210 20% 95%;
+    --ring: 210 100% 56%;
+
+    --radius: 0.75rem;
+
+    --chart-1: 210 100% 56%;
+    --chart-2: 39 100% 60%;
+    --chart-3: 120 60% 50%;
+    --chart-4: 280 80% 65%;
+    --chart-5: 0 84% 60%;
+  }
+
+  body {
+      background-color: #e6e6e6; /* Fond gris clair */
+      font-family: 'Inter', sans-serif;
+    
+  }
+}
+
+/* UTILITAIRES */
+@layer components {
+  .card {
+    @apply bg-[hsl(var(--card))] text-[hsl(var(--card-foreground))] shadow-sm rounded-lg p-4;
+  }
+
+  .btn-primary {
+    @apply bg-[hsl(var(--primary))] text-white font-medium px-4 py-2 rounded-md hover:bg-blue-700 transition;
+  }
+
+  .input {
+    @apply bg-[hsl(var(--input))] border border-[hsl(var(--border))] rounded-md px-3 py-2 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[hsl(var(--ring))] focus:border-[hsl(var(--ring))];
+  }
+}
